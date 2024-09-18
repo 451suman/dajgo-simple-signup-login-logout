@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>This is the demo page</h1>
+
+{% if user.staff_status %}
+    <span class="badge bg-success">Staff</span>
+
+{% elif user.supervisor_status %}
+    <span class="badge bg-warning">Supervisor</span>
+
+{% else %}
+    <span class="badge bg-danger">Not Staff</span>
+{% endif %}
+
+{% endblock %}
